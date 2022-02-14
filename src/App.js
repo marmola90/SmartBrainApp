@@ -6,15 +6,11 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import Clarifai from 'clarifai';
 import Particles from 'react-particles-js';
-<<<<<<< HEAD
-import { Component } from 'react';
-=======
 import { Component } from 'react/cjs/react.production.min';
 
 const app = new Clarifai.App({
   apiKey: '61e7d94872084515ad6fcccd0fca12bc'
 });
->>>>>>> 0911263eabbd41a7ca0f952153a53e0da0ad87aa
 
 const particlesOptions = {
   particles: {
@@ -38,16 +34,6 @@ const particlesOptions = {
   }
 }
 
-<<<<<<< HEAD
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {input:'',}
-  }
-
-  onInputChange =(event) => {
-      console.log(event);
-=======
 class App extends Component{
   constructor(){
       super();
@@ -94,26 +80,11 @@ class App extends Component{
        )
       .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
       .catch(err =>  console.log(err));
->>>>>>> 0911263eabbd41a7ca0f952153a53e0da0ad87aa
   }
 
   render(){
     return (
       <div className="App">
-<<<<<<< HEAD
-        <Particles className='particles'
-                params={particlesOptions}
-        />
-        <Navigation />
-        <Logo />
-        <Rank />
-        <ImageLinkForm onInputChange={this.onInputChange}/>
-        {/*<FaceRecognition />*/}
-      </div>
-    );
-  };
-  
-=======
          <Particles className='particles'
                 params={particlesOptions}
               />
@@ -129,7 +100,6 @@ class App extends Component{
       </div>
     );
   }
->>>>>>> 0911263eabbd41a7ca0f952153a53e0da0ad87aa
 }
 
 export default App;
