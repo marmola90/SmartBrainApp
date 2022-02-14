@@ -59,7 +59,8 @@ class App extends Component{
     
   } 
 
-  displauFaceBox =(box)=>{
+  //DisplayFaceBox
+  displayFaceBox =(box)=>{
     console.log(box);
     this.setState({box: box});
 
@@ -77,7 +78,7 @@ class App extends Component{
           Clarifai.FACE_DETECT_MODEL,
           this.state.input
        )
-      .then(response => this.displauFaceBox(this.calculateFaceLocation(response)))
+      .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
       .catch(err =>  console.log(err));
   }
 
